@@ -5,7 +5,7 @@ gemspec
 
 group :db do
   # Needed for Msf::DbManager
-  gem 'activerecord', '>= 3.0.0', '< 4.0.0'
+  gem 'activerecord', '>= 3.2.19', '< 4.0.0'
 
   # Metasploit::Credential database models
   gem 'metasploit-credential', '~> 0.12.0'
