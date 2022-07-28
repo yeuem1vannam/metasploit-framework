@@ -5,12 +5,12 @@ gemspec
 
 group :db do
   # Needed for Msf::DbManager
-  gem 'activerecord', '>= 3.0.0', '< 4.0.0'
+  gem 'activerecord', '~> 5.2', '>= 5.2.8.1'
 
   # Metasploit::Credential database models
-  gem 'metasploit-credential', '~> 0.12.0'
+  gem 'metasploit-credential', '~> 2.0.0'
   # Database models shared between framework and Pro.
-  gem 'metasploit_data_models', '~> 0.21.1'
+  gem 'metasploit_data_models', '~> 4.0.0'
   # Needed for module caching in Mdm::ModuleDetails
   gem 'pg', '>= 0.11'
 end
