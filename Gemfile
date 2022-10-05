@@ -5,21 +5,21 @@ gemspec
 
 group :db do
   # Needed for Msf::DbManager
-  gem 'activerecord', '>= 3.0.0', '< 4.0.0'
+  gem 'activerecord', '~> 5.2', '>= 5.2.8.1'
 
   # Metasploit::Credential database models
-  gem 'metasploit-credential', '~> 0.12.0'
+  gem 'metasploit-credential', '~> 2.0.0'
   # Database models shared between framework and Pro.
-  gem 'metasploit_data_models', '~> 0.21.1'
+  gem 'metasploit_data_models', '~> 4.0.0'
   # Needed for module caching in Mdm::ModuleDetails
   gem 'pg', '>= 0.11'
 end
 
 group :development do
   # Markdown formatting for yard
-  gem 'redcarpet'
+  gem 'redcarpet', '>= 3.5.1'
   # generating documentation
-  gem 'yard'
+  gem 'yard', '>= 0.9.20'
   # for development and testing purposes
   gem 'pry'
 end
@@ -28,18 +28,18 @@ group :development, :test do
   # supplies factories for producing model instance for specs
   # Version 4.1.0 or newer is needed to support generate calls without the
   # 'FactoryGirl.' in factory definitions syntax.
-  gem 'factory_girl', '>= 4.1.0'
+  gem 'factory_girl', '>= 4.4.0'
   # automatically include factories from spec/factories
   gem 'factory_girl_rails'
   # Make rspec output shorter and more useful
   gem 'fivemat', '1.2.1'
   # running documentation generation tasks and rspec tasks
-  gem 'rake', '>= 10.0.0'
+  gem 'rake', '>= 12.3.3'
   # testing framework
   gem 'rspec', '>= 2.12', '< 3.0.0'
   # Define `rake spec`.  Must be in development AND test so that its available by default as a rake test when the
   # environment is development
-  gem 'rspec-rails' , '>= 2.12', '< 3.0.0'
+  gem 'rspec-rails' , '>= 2.99.0', '< 3.0.0'
 end
 
 group :pcap do
